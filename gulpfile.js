@@ -17,9 +17,9 @@ const { readFileSync } = require('fs');
 
 let isProd = false; // dev by default
 
-const clean = () => {
-	return del(['app/*']);
-};
+// const clean = () => {
+// 	return del(['app/*']);
+// };
 
 //svg sprite
 const svgSprites = () => {
@@ -85,7 +85,9 @@ const watchFiles = () => {
   });
 
   watch('./src/style/main.scss', styles);
+  watch('./src/style/**/**', styles);
   watch('./src/html/*.html', htmlInclude);
+  watch('./src/html/**/*.html', htmlInclude);
   watch('./src/resources/**', resources);
   watch('./src/img/*.{jpg,jpeg,png,svg}', images);
 	watch('./src/img/**/*.{jpg,jpeg,png}', images);
@@ -120,9 +122,9 @@ const toProd = (done) => {
   isProd = true;
   done();
 };
+//clean Отключен
+exports.default = series(htmlInclude, styles, resources, images, svgSprites, watchFiles);
 
-exports.default = series(clean, htmlInclude, styles, resources, images, svgSprites, watchFiles);
-
-exports.build = series(toProd, clean, htmlInclude, styles, resources, images, svgSprites);
+exports.build = series(toProd, htmlInclude, styles, resources, images, svgSprites);
 
 exports.cache = series(cache, rewrite);

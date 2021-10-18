@@ -1,0 +1,28 @@
+.burgerMenu{
+  position: fixed;
+  left: -500px;
+  transition: all 0.6s;
+  .buttons{
+    padding-top: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .button{
+      height: 100px;
+      background-color: white;
+      border: solid 5px $Green;
+      color: #444;
+      &:hover{
+        background-color: $Green;
+        color: white;
+      }
+    }
+  }
+}
+.burgerMenu.active{
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(27, 188, 155, 0.8);
+}

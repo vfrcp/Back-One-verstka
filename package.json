@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production && gulp build",
-    "dev": "webpack --mode development --watch && gulp",
+    "devW": "webpack --mode development --watch",
+    "devG": "gulp",
     "cache": "gulp cache"
   },
   "devDependencies": {
-    
     "normalize.css": "^8.0.1",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.0",

@@ -1,0 +1,20 @@
+@import "./other/_variables";
+@import "./vendor/normalize";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@import "./components/_header";
+@import "./components/_container";
+@import "./components/labelSection";
+@import "./components/_portfolio";
+@import "./components/_aboutUs";
+@import "./components/_contactUs";
+@import "./components/_footer";
+@import "./components/_nav";
+
+*{
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: url("../img/other/background.jpg") no-repeat center/cover;
+}

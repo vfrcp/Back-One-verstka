@@ -1,0 +1,21 @@
+.footer{
+  min-height: 90px;
+  background-color: #2d3e50;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .copyright{
+    color: white;
+  }
+  .arrowUp{
+    transform: rotate(180deg);
+    .arrow{
+      font-size: 45px;
+      color: white;
+      transition: all 0.6s;
+      &:hover{
+        color: $Green;
+      }
+    }
+  }
+}
